@@ -125,61 +125,61 @@ if (isset($_SESSION['success_message'])) {
 
   <section class="products" id="products">
     <div class="product">
-      <img src="my way.webp" alt="My Way parfyum">
+      <img src="./imgs/my way.webp" alt="My Way parfyum">
       <h3>My Way</h3>
       <p>1 000 000 so'm</p>
       <button onclick="addToCart('My Way', '1 000 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Gypsy Water.webp" alt="Gypsy Water parfyum">
+      <img src="./imgs/Gypsy Water.webp" alt="Gypsy Water parfyum">
       <h3>Gypsy Water</h3>
       <p>1 500 000 so'm</p>
       <button onclick="addToCart('Gypsy Water', '1 500 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="emissa.jpg" alt="Emissa parfyum">
+      <img src="./imgs/emissa.jpg" alt="Emissa parfyum">
       <h3>Emissa</h3>
       <p>2 000 000 so'm</p>
       <button onclick="addToCart('Emissa', '2 000 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Maybelline Mascara.webp" alt="Maybelline Maskara">
+      <img src="./imgs/Maybelline Mascara.webp" alt="Maybelline Maskara">
       <h3>Maybelline Mascara</h3>
       <p>300 000 so'm</p>
       <button onclick="addToCart('Maybelline Mascara', '300 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Smoky eyes.jpg" alt="Smoky Eyes">
+      <img src="./imgs/Smoky eyes.jpg" alt="Smoky Eyes">
       <h3>Smoky Eyes</h3>
       <p>350 000 so'm</p>
       <button onclick="addToCart('Smoky Eyes', '350 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Volume.jpg" alt="Volume">
+      <img src="./imgs/Volume.jpg" alt="Volume">
       <h3>Volume</h3>
       <p>400 000 so'm</p>
       <button onclick="addToCart('Volume', '400 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Kosmetika sumkasi.webp" alt="Kosmetika sumkasi">
+      <img src="./imgs/Kosmetika sumkasi.webp" alt="Kosmetika sumkasi">
       <h3>Kosmetika sumkasi</h3>
       <p>1 500 000 so'm</p>
       <button onclick="addToCart('Kosmetika sumkasi', '1 500 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Kistichka nabor.webp" alt="Kistichka nabor">
+      <img src="./imgs/Kistichka nabor.webp" alt="Kistichka nabor">
       <h3>Kistichka nabor</h3>
       <p>1 500 000 so'm</p>
       <button onclick="addToCart('Kistichka nabor', '1 500 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Jadore.jpg" alt="Jadore">
+      <img src="./imgs/Jadore.jpg" alt="Jadore">
       <h3>Jadore</h3>
       <p>1 500 000 so'm</p>
       <button onclick="addToCart('Jadore', '1 500 000 so\'m')">Savatga qo‘shish</button>
     </div>
     <div class="product">
-      <img src="Gucci.webp" alt="Gucci">
+      <img src="./imgs/Gucci.webp" alt="Gucci">
       <h3>Gucci</h3>
       <p>1 500 000 so'm</p>
       <button onclick="addToCart('Gucci', '1 500 000 so\'m')">Savatga qo‘shish</button>
