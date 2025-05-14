@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa</title>
+    <!-- <link rel="icon" href="logo.webp"> -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("UdxDxq_knxXngRTrI"); 
+        })();
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            max-height: 300px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h2>Bog‘lanish</h2>
+    <form id="contact-form">
+        <label for="email">Email manzilingiz</label>
+        <input type="email" id="email" name="user_email" placeholder="Emailingizni kiriting" required>
+
+        <label for="message">Xabaringiz</label>
+        <textarea id="message" name="message" placeholder="Xabaringizni yozing..." required></textarea>
+
+        <button type="submit">Yuborish</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_0fr2m3n', 'template_vfhymsi', this)
+            .then(function(response) {
+                alert("Xabaringiz yuborildi!");
+            }, function(error) {
+                alert("Xatolik yuz berdi. Qayta urinib ko‘ring.");
+                console.error(error);
+            });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     header {
+      background-color: #ffccd5;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #b30059;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #fff0f5;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #800040;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #e60073;
+    }
+     #cart {
+      background: #fff0f5;
+      padding: 20px;
+      margin: 40px;
+      border-radius: 10px;
+    }
+    #cart h2 {
+      margin-bottom: 10px;
+    }
+    #cart-items li {
+      margin-bottom: 8px;
+    }
+    #cart-items button {
+      margin-left: 10px;
+      color: red;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+        footer {
+      text-align: center;
+      background: #ffccd5;
+      padding: 20px;
+      margin-top: 40px;
+    }
+</style>
+<body>
+    
+  <header>
+    <h1>SAVAT</h1>
+  </header>
+  
+  <nav>
+    <a href="index.html">Bosh sahifa</a>
+    <a href="home.html">Atirlar</a>
+    <a href="kosmetika.html">Kosmetikalar</a>
+    <a href="Yuz uxodlari.html">Yuz uxodlari</a>
+    <a href="contacts.html">Bog‘lanish</a>
+    <a href="login.html">Ro‘yxatdan o‘tish</a>
+  </nav>
+    <section id="cart">
+    <h2>Savat</h2>
+    <ul id="cart-items" style="list-style: none; padding-left: 0;"></ul>
+  </section>
+  <footer id="contact">
+    <h2>Bog'lanish</h2>
+    <p>Telegram: <a href="https://t.me/shahrizoda77">@shahrizoda77</a></p>
+  </footer>
+  
+  <script>
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(name, price) {
+      cartItems.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      updateCartUI();
+    }
+
+    function removeFromCart(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+
+      if (cartItems.length === 0) {
+        cartList.innerHTML = '<li>Savat bo‘sh</li>';
+      } else {
+        cartItems.forEach((item, index) => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            ${item.name} - ${item.price}
+            <button onclick="removeFromCart(${index})">❌</button>
+          `;
+          cartList.appendChild(li);
+        });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartUI);
+  </script>
+</body>
+</html>
